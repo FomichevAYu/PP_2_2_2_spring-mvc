@@ -3,9 +3,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Car list</title>
 </head>
 <body>
-<p> Машина </p>
+<table>
+    <thead>
+    <tr>
+    <th>Model</th>
+        <th>Series</th>
+        <th>Color</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="car : ${car}">
+    <td th:text="${car.model}">Model</td>
+            <td th:text="${car.series}">Series</td>
+            <td th:text="${car.color}">Color</td>
+        </tr>
+    </tbody>
+</table>
 </body>
 </html>
